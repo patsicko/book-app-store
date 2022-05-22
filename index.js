@@ -46,6 +46,7 @@ form.appendChild(yes);
 const radio1=document.createElement("input");
 radio1.classList.add("radio");
 radio1.setAttribute("type","radio");
+radio1.setAttribute("id","radio")
 radio1.setAttribute("name","radio");
 form.appendChild(radio1);
 
@@ -64,8 +65,12 @@ form.appendChild(br3);
 const save=document.createElement("input");
 save.classList.add("button");
 save.setAttribute("type","submit");
+save.setAttribute("id","save");
 save.setAttribute("value","save");
 form.appendChild(save);
+const description=document.createElement("div");
+description.classList.add("description");
+form.appendChild(description);
 
 const books=[];
 
@@ -83,36 +88,35 @@ function addbook(title,author,pages,read){
 }
 
 function displaybooks(books){
-    const description=document.createElement("div");
-    description.classList.add("description");
    
     const booklist=document.createElement("ul");
     booklist.classList.add("bookList");
-    for(book of books){
-     
+    for(const book of books){
+     const bookElement=document.createElement("li");
+     bookElement.classList.add("book");
+     for(const descr of object.keys(book)){
+      const pElement=document.createElement("p");
+      pElement.innerText=descr[book];
+      bookElement.appendChild(pElement);
+     }
+      booklist.appendChild(bookElement);
     }
-  
+    description.appendChild(booklist);
+
+
 }
 
+function main(){
+   const btn=document.getElementById("save");
+   btn.addEventListener("click",function(event){
+       const title=document.getElementById("title").value;
+       const author=document.getElementById("author").value;
+       const pages=document.getElementById("pages").value;
+       const read=document.getElementById("radio").value;
+       addbook(title,author,pages,read);
+       displaybooks(books);
+   })
+}
+// displaybooks(books);
+main();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// radio.classList.add("radio");
-// radio.setAttribute("type","radio");

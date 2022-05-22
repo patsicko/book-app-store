@@ -12,4 +12,10 @@ body {
   margin-top: 50px;
   padding-left: 50px;
   padding-top: 50px;
+}
+
+.description {
+  border: 1px solid black;
+  height: 300px;
+  width: 700px;
 }/*# sourceMappingURL=style.css.map */
