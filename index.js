@@ -9,7 +9,7 @@ title.setAttribute("type","text");
 title.setAttribute("placeholder","Add book title");
 title.setAttribute("id","title");
 form.appendChild(title);
-addBook.appendChild(form);
+
 
 const space1=document.createTextNode(" ");
 form.appendChild(space1);
@@ -48,16 +48,18 @@ radio1.classList.add("radio");
 radio1.setAttribute("type","radio");
 radio1.setAttribute("id","radio")
 radio1.setAttribute("name","radio");
+radio1.setAttribute("value","yes");
 form.appendChild(radio1);
 
 const no=document.createTextNode("No");
 form.appendChild(no);
 
 const radio2=document.createElement("input");
-radio2.classList.add("no");
+radio2.classList.add("radio");
 radio2.setAttribute("type","radio");
 radio2.setAttribute("id","radio");
 radio2.setAttribute("name","radio");
+radio2.setAttribute("value","No");
 form.appendChild(radio2);
 
 const br3=document.createElement("br");
@@ -75,16 +77,17 @@ form.appendChild(description);
 const books=[];
 
 function Book(title,author,pages,read){
-    this.title="title",
-    this.author="author",
-    this.pages="pages",
-    this.read="read";
+    this.title=title,
+    this.author=author,
+    this.pages=pages,
+    this.read=read;
 
 }
 
 function addbook(title,author,pages,read){
     const newbook=new Book(title,author,pages,read);
     books.push(newbook);
+    console.log(books);
 }
 
 function displaybooks(books){
@@ -94,29 +97,32 @@ function displaybooks(books){
     for(const book of books){
      const bookElement=document.createElement("li");
      bookElement.classList.add("book");
-     for(const descr of object.keys(book)){
+     for(const descr of Object.keys(book)){
       const pElement=document.createElement("p");
-      pElement.innerText=descr[book];
+      pElement.innerText=book[descr];
       bookElement.appendChild(pElement);
      }
       booklist.appendChild(bookElement);
     }
     description.appendChild(booklist);
-
+    addBook.appendChild(form);
 
 }
 
 function main(){
    const btn=document.getElementById("save");
    btn.addEventListener("click",function(event){
+       event.preventDefault();
        const title=document.getElementById("title").value;
        const author=document.getElementById("author").value;
        const pages=document.getElementById("pages").value;
-       const read=document.getElementById("radio").value;
+       const read=document.querySelector("input[type='radio'][name=radio]:checked").value;
+       console.log({title,author,pages,read});
+       
        addbook(title,author,pages,read);
        displaybooks(books);
    })
 }
-// displaybooks(books);
+displaybooks(books);
 main();
 
