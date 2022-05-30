@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 10px;
+  color: gray;
+}
+
+.main {
+  border: 1px solid black;
+  width: 50%;
+  height: 400px;
+  margin: auto;
+  margin-top: 50px;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+.description {
+  border: 1px solid black;
+  height: 300px;
+  width: 700px;
+}/*# sourceMappingURL=style.css.map */
