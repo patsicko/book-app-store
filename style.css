@@ -12,12 +12,16 @@ body {
   margin-top: 50px;
   padding-left: 50px;
   padding-top: 50px;
+  background-color: #b1f0eb;
+  border-radius: 5px;
 }
 
 .description {
   border: 1px solid black;
   height: 300px;
   width: 900px;
+  background-color: #ade7b2;
+  border-radius: 15px;
   overflow-y: scroll;
 }
 
@@ -39,6 +43,5 @@ body {
 .bookList {
   display: grid;
   grid-template-columns: 5fr 1fr;
-  grid-row-gap: 20px;
-  grid-column-gap: 20px;
+  grid-row-gap: 15px;
 }/*# sourceMappingURL=style.css.map */
