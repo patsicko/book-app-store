@@ -23,6 +23,8 @@ The second part is where all added books display. You can scroll down to see all
 1. VS Code
 # Author
 ## MANIBAHO Patrick
-[Github: patsicko](https://github.com/patsicko)
-[LinkedIn: MANIBAHO Patrick](https://www.linkedin.com/in/manibaho-patrick-a7851a124/)
-[Twitter: @patsicko](https://twitter.com/patsicko)
+[Github: patsicko](https://github.com/patsicko) <https://github.com/patsicko>
+
+[LinkedIn: MANIBAHO Patrick](https://www.linkedin.com/in/manibaho-patrick-a7851a124/) <https://www.linkedin.com/in/manibaho-patrick-a7851a124/>
+
+[Twitter: @patsicko](https://twitter.com/patsicko) <https://twitter.com/patsicko>
