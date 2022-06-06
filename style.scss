@@ -16,5 +16,24 @@ padding-top: 50px;
 .description{
     border: 1px solid black;
     height: 300px;
+    width: 900px;
+}
+.book{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 3px solid gray;
     width: 700px;
+    background-color: rgb(246, 208, 162);
+
+}
+.delete{
+    width: 80px;
+    height: 60px;
+    color: red;
+}
+.bookList{
+    display:flex;
+    
+    
 }

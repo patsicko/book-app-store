@@ -17,5 +17,28 @@ body {
 .description {
   border: 1px solid black;
   height: 300px;
+  width: 900px;
+  overflow-y: scroll;
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 3px solid gray;
   width: 700px;
+  background-color: rgb(246, 208, 162);
+}
+
+.delete {
+  width: 80px;
+  height: 60px;
+  color: red;
+}
+
+.bookList {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
 }/*# sourceMappingURL=style.css.map */
